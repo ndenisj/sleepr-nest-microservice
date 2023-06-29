@@ -9,3 +9,5 @@ nest g resource reservations    =   generate a CRUD resource called reservations
 npm i @nestjs/mongoose mongoose     =   install mongoose dependency
 npm i @nestjs/config        =   install config dependency
 npm i joi   =   install joi dependency for env variable validation
+npm i class-validator class-transformer     =   Input Validation
+npm i nestjs-pino pino-http pino-pretty     =   Logger
