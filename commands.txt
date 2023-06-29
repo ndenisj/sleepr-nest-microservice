@@ -3,6 +3,8 @@ npm run start:dev       =   run app
 nest g library common   =   generate the common library
 nest g module database -p common     =   generate database module within the common library
 nest g module config -p common       =   generate config module within the common library
+nest g app reservations     =   generate a new microservice
+nest g resource reservations    =   generate a CRUD resource called reservations
 
 npm i @nestjs/mongoose mongoose     =   install mongoose dependency
 npm i @nestjs/config        =   install config dependency
