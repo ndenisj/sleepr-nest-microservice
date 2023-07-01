@@ -26,3 +26,5 @@ npm i bcryptjs express      =   Password hashing - Alternative to bcrypt (to avo
 npm i -D @types/bcryptjs
 npm i cookie-parser     =   To parse incoming cookies and add them to request object
 npm i -D @types/cookie-parser    
+
+npm i @nestjs/microservices     =   To setup microservices communication
