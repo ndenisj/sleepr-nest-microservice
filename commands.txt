@@ -22,3 +22,5 @@ npm i @nestjs/passport passport passport-local      =   Passport for authenticat
 npm i -D @types/passport-local
 npm i @nestjs/jwt passport-jwt      =   Jwt authentication
 npm i -D @types/passport-jwt
+npm i bcryptjs express      =   Password hashing - Alternative to bcrypt (to avoid issues with mounting volumes in docker with bcrypt)
+npm i -D @types/bcryptjs
