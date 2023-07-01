@@ -10,7 +10,7 @@ services:
     volumes:
       - .:/usr/src/app
     env_file:
-      - ./.env
+      - ./apps/reservations/.env
 
   auth:
     build:
@@ -23,7 +23,7 @@ services:
     volumes:
       - .:/usr/src/app
     env_file:
-      - ./.env
+      - ./apps/auth/.env
 
   mongo:
     image: mongo

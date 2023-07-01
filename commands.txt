@@ -11,7 +11,14 @@ nest g controller users
 nest g service users
 
 npm i @nestjs/mongoose mongoose     =   install mongoose dependency
+
 npm i @nestjs/config        =   install config dependency
 npm i joi   =   install joi dependency for env variable validation
+
 npm i class-validator class-transformer     =   Input Validation
 npm i nestjs-pino pino-http pino-pretty     =   Logger
+
+npm i @nestjs/passport passport passport-local      =   Passport for authentication
+npm i -D @types/passport-local
+npm i @nestjs/jwt passport-jwt      =   Jwt authentication
+npm i -D @types/passport-jwt
