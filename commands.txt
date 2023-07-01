@@ -24,3 +24,5 @@ npm i @nestjs/jwt passport-jwt      =   Jwt authentication
 npm i -D @types/passport-jwt
 npm i bcryptjs express      =   Password hashing - Alternative to bcrypt (to avoid issues with mounting volumes in docker with bcrypt)
 npm i -D @types/bcryptjs
+npm i cookie-parser     =   To parse incoming cookies and add them to request object
+npm i -D @types/cookie-parser    
