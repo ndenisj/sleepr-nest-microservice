@@ -5,6 +5,10 @@ nest g module database -p common     =   generate database module within the com
 nest g module config -p common       =   generate config module within the common library
 nest g app reservations     =   generate a new microservice
 nest g resource reservations    =   generate a CRUD resource called reservations
+nest g app auth     =     generate new auth microservice
+nest g module users     =   generate users module
+nest g controller users
+nest g service users
 
 npm i @nestjs/mongoose mongoose     =   install mongoose dependency
 npm i @nestjs/config        =   install config dependency
