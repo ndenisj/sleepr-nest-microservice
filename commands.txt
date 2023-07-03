@@ -9,6 +9,7 @@ nest g app auth     =     generate new auth microservice
 nest g module users     =   generate users module
 nest g controller users
 nest g service users
+nest g app payments
 
 npm i @nestjs/mongoose mongoose     =   install mongoose dependency
 
@@ -28,3 +29,5 @@ npm i cookie-parser     =   To parse incoming cookies and add them to request ob
 npm i -D @types/cookie-parser    
 
 npm i @nestjs/microservices     =   To setup microservices communication
+
+npm i stripe
