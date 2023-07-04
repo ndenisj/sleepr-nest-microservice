@@ -10,6 +10,7 @@ nest g module users     =   generate users module
 nest g controller users
 nest g service users
 nest g app payments
+nest g app notifications
 
 npm i @nestjs/mongoose mongoose     =   install mongoose dependency
 
@@ -31,3 +32,6 @@ npm i -D @types/cookie-parser
 npm i @nestjs/microservices     =   To setup microservices communication
 
 npm i stripe
+
+npm i nodemailer
+npm i -D @types/nodemailer
