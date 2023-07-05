@@ -3,14 +3,14 @@ FROM node:alpine As development
 WORKDIR /usr/src/app
 
 COPY package.json ./
-# COPY pnpm-lock.yaml ./
-
-# RUN npm install -g pnpm
+COPY tsconfig.json tsconfig.json
+COPY nest-cli.json nest-cli.json
 RUN npm install
 
-COPY . .
+COPY apps/notifications apps/notifications
+COPY libs libs
 
-RUN npm run build
+RUN npm run build notifications
 
 
 FROM node:alpine as production

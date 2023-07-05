@@ -35,3 +35,16 @@ npm i stripe
 
 npm i nodemailer
 npm i -D @types/nodemailer
+
+
+===============================================
+After setting up gcloud on your PC
+cd apps/reservations
+
+docker build -t reservations -f . ../../ OR docker build -t reservations -f Dockerfile ../../
+docker tag reservations us-east4-docker.pkg.dev/PROJECT_ID/reservations/production
+docker image push us-east4-docker.pkg.dev/PROJECT_ID/reservations/production
+
+==============================================
+create package.json for each of the services
+npm init
