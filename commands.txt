@@ -48,3 +48,6 @@ docker image push us-east4-docker.pkg.dev/PROJECT_ID/reservations/production
 ==============================================
 create package.json for each of the services
 npm init
+
+---------------------------------------------
+docker-compose up --build
