@@ -95,3 +95,11 @@ kubectl create service nodeport reservations --tcp=3000 --dry-run=client -o yaml
 ---- more commands
 kubectl edit secret google
 kubectl rollout restart deployment notifications
+kubectl config get-contexts
+kubectl config use-context docker-desktop
+kubectl get secrets
+kubectl get secret stripe -o yaml > stripe.yaml
+kubectl config use-context google-context
+kubectl create -f stripe.yaml
+// after creating the ingress and upgrading helm
+kubectl get ing
