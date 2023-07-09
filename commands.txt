@@ -103,3 +103,5 @@ kubectl config use-context google-context
 kubectl create -f stripe.yaml
 // after creating the ingress and upgrading helm
 kubectl get ing
+
+----------- Deploy to aws
