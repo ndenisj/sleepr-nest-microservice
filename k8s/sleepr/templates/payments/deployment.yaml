@@ -17,3 +17,17 @@ spec:
       containers:
         - image: us-east4-docker.pkg.dev/sleepr-391822/payments/production
           name: payments
+          env:
+            - name: TCP_PORT
+              value: '3003'
+            - name: NOTIFICATIONS_HOST
+              value: 'notifications' # name of the notifications kubernates service that was created
+            - name: NOTIFICATIONS_PORT
+              value: '3004'
+            - name: STRIPE_SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: stripe
+                  key: apiKey
+          ports:
+            - containerPort: 3003

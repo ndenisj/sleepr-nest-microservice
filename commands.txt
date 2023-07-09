@@ -71,3 +71,27 @@ kubectl create secret docker-registry gcr-json-key --docker-server=[URI of the r
 
 kubectl patch serviceaccount default -p '{"imagePullSecrets": [{"name": "gcr-json-key"}]}'
 kubectl rollout restart deployment [deployment name]
+
+Kubernates secrets (environment variables):
+kubectl create secret generic mongodb --from-literal=connectionString=[MONGODB CONNECTIONSTRING]
+        OR
+kubectl create secret generic mongodb --from-file=mongodb=./mongo.txt
+        OR with kubernates yaml file
+encode in base64:  echo -n 'secret' | base64
+kubectl apply -f ./secret.yaml
+
+*****NOTE****** after every kubernates related file edit, run `helm upgrade sleepr .` to redeploy the changes
+-----
+Create service for notification service so that other services(pods can communicate with it in k8 cluster):
+kubectl create service clusterip notifications --tcp=3004 --dry-run=client -o yaml > service.yaml
+helm upgrade sleepr .
+kubectl get svc
+kubectl logs reservations-677cdfc548-tkfph --follow
+
+... lastly create the reservations service. This is important bcos its where the users will enter to make calls to create reservations and trigger the whole application (This service will act like the api gateway)
+
+kubectl create service nodeport reservations --tcp=3000 --dry-run=client -o yaml > service.yaml
+
+---- more commands
+kubectl edit secret google
+kubectl rollout restart deployment notifications
