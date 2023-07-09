@@ -51,3 +51,23 @@ npm init
 
 ---------------------------------------------
 docker-compose up --build
+
+====================================================================================
+K8s
+====================================================================================
+cd k8s
+helm create sleepr
+kubectl create deployment reservations --image=us-east4-docker.pkg.dev/PROJECT_ID/reservations/production --dry-run=client -o yaml > deployment.yaml
+cd sleepr 
+helm install sleepr .
+
+kubectl logs reservations-5c445687c5-mfx4b
+
+kubectl describe po reservations-5c445687c5-
+
+
+gcloud permission:
+kubectl create secret docker-registry gcr-json-key --docker-server=[URI of the repo in gcloud] --docker-username=_json_key --docker-password="$(cat ./sleepr-a778d2c28523.json)" --docker-email=john.doe@gmail.com
+
+kubectl patch serviceaccount default -p '{"imagePullSecrets": [{"name": "gcr-json-key"}]}'
+kubectl rollout restart deployment [deployment name]
