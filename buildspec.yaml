@@ -10,16 +10,16 @@ phases:
       - echo Build started on `date`
       - echo Building the Docker images...
 
-      - docker build -t reservations ./apps/reservations/Dockerfile .
+      - docker build -t reservations -f ./apps/reservations/Dockerfile .
       - docker tag reservations:latest 324497360810.dkr.ecr.us-east-1.amazonaws.com/reservations:latest
 
-      - docker build -t auth ./apps/auth/Dockerfile .
+      - docker build -t auth -f ./apps/auth/Dockerfile .
       - docker tag auth:latest 324497360810.dkr.ecr.us-east-1.amazonaws.com/auth:latest
 
-      - docker build -t payments ./apps/payments/Dockerfile .
+      - docker build -t payments -f ./apps/payments/Dockerfile .
       - docker tag payments:latest 324497360810.dkr.ecr.us-east-1.amazonaws.com/payments:latest
 
-      - docker build -t notifications ./apps/notifications/Dockerfile .
+      - docker build -t notifications -f ./apps/notifications/Dockerfile .
       - docker tag notifications:latest 324497360810.dkr.ecr.us-east-1.amazonaws.com/notifications:latest
   post_build:
     commands:
