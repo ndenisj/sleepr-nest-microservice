@@ -15,7 +15,7 @@ spec:
         app: payments
     spec:
       containers:
-        - image: 324497360810.dkr.ecr.us-east-1.amazonaws.com/payments:latest
+        - image: us-east4-docker.pkg.dev/sleepr-391822/payments/production
           name: payments
           env:
             - name: TCP_PORT

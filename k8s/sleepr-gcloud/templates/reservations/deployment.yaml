@@ -15,7 +15,7 @@ spec:
         app: reservations
     spec:
       containers:
-        - image: 324497360810.dkr.ecr.us-east-1.amazonaws.com/reservations:latest
+        - image: us-east4-docker.pkg.dev/sleepr-391822/reservations/production
           name: reservations
           env:
             - name: HTTP_PORT
