@@ -117,3 +117,6 @@ E2E test
 ---------------------------
 npm init
 npm install -D jest ts-jest typescript @types/jest
+
+============ TypeOrm
+npm i @nestjs/typeorm typeorm mysql2
