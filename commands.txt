@@ -111,3 +111,9 @@ eksctl create cluster -f ./cluster.yaml
 # sclae up node group
 eksctl get nodegroups --cluster sleepr
 eksctl scale nodegroup ng-1 -N 5 --cluster sleepr -M 5
+
+----------------------------
+E2E test
+---------------------------
+npm init
+npm install -D jest ts-jest typescript @types/jest
